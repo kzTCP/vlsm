@@ -347,7 +347,7 @@ a:hover{
 
 .bar{
 
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
 
