@@ -9,4 +9,4 @@ Use VLSM method to generate:
 6. PC config commands for `cisco packet tracer`
 7. Costume Command
 
-[preview](kztcp.github.io/vlsm-/subnet.html)
+[preview](https://kztcp.github.io/vlsm-/subnet.html)
