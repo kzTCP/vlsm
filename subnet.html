@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subnet</title>
+
+    <link rel="stylesheet" href="ospf.css">
+
+</head>
+
+<body>
+
+
+
+    <main id='main'>
+
+        <p> Network</p>
+        <input type="text" id="network">
+        <p> Mask</p>
+        <input type="text" id="mask">
+        <p> Hosts</p>
+
+        <textarea id="hosts" oninput="updateListHostsTxt()" cols="21" rows="10"></textarea>
+
+        <div class="hostsProcess">
+
+            <p>Hosts To Process</p>
+
+            <select id="selectHosts"> </select>
+
+            <input type="text" id="toConfig" placeholder="num of hosts to config">
+
+            <button id='process' onclick="processOne()" disabled>Process</button>
+
+            <button onclick="processAll()">Process All</button>
+
+            <div class="choices">
+
+                <table class="choicesTable">
+
+                    <tr>
+                        <th colspan="2"> Tables To Show </th>
+                    </tr>
+                    <tr>
+                        <th> VLSM </th>
+                        <td> <input name='table' value="vlsm" type="radio" onchange="showTable()" checked> </td>
+                    </tr>
+                    <tr>
+                        <th> Config </th>
+                        <td> <input name='table' value="config" type="radio" onchange="showTable()"> </td>
+                    </tr>
+                    <tr>
+                        <th> VLSM <br> CMDS</th>
+                        <td> <input name='table' value="cmd" type="radio" onchange="showTable()"> </td>
+                    </tr>
+                    <tr>
+                        <th> OSPF </th>
+                        <td> <input name='table' value="ospf" type="radio" onchange="showTable()"> </td>
+                    </tr>
+                    <tr>
+                        <th> Mask </th>
+                        <td> <input name='table' value="mask" type="radio" onchange="showTable()"> </td>
+                    </tr>
+
+                </table>
+
+
+            </div>
+
+        </div>
+
+        <div class="codes">
+
+            <div id="vlsm"></div>
+
+            <div id="config"></div>
+
+            <div id="vlsmCMDS"></div>
+
+            <div id="ospf"></div>
+
+            <div id="masks"></div>
+
+        </div>
+
+        <div class="myConfig">
+
+            <table border="1" id="myConfig">
+
+                <tr>
+                    <th>initial commands</th>
+                    <td> <textarea id="g_init" rows="5"></textarea> </td>
+                </tr>
+
+                <tr>
+                    <th>Subnet</th>
+                    <td><select id="g_subnet" onchange="subnetChanged()"></select></td>
+                </tr>
+
+                <tr id="hostsTr">
+                    <th>Host</th>
+                    <td><select id="g_host_IP"></select></td>
+                </tr>
+
+                <tr id="maskTr">
+                    <th>Mask</th>
+                    <td><select id="g_mask"></select> </td>
+                </tr>
+
+                <tr id="gatewayTr">
+                    <th>Gateway</th>
+                    <td><select id="g_gateway"></select> </td>
+                </tr>
+
+                <tr>
+                    <th>Formula examples</th>
+                    <td>
+                        <select id="g_exp_formula" onchange="exampleFormula()"></select>
+                    </td>
+
+                </tr>
+
+                <tr id="nextHopTr">
+                    <th>Next Hop</th>
+                    <td><select id="g_Next_Hop"></select></td>
+                </tr>
+
+                <tr id="portTr">
+                    <th>Port</th>
+                    <td><input id="g_port" type="text"></td>
+                </tr>
+
+                <tr>
+
+                    <th>Formula</th>
+
+                    <td>
+                        <textarea id="g_formula" rows="5">
+                            ipconfig {host} {ex_mask} {gateway}
+                        </textarea>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <th>initial</th>
+
+                    <td>
+                        <span>Yes</span> <input type="radio" name="radio_init" value="yes">
+                        <span>No</span><input type="radio" name="radio_init" value="no" checked>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <th>
+                        <button class="g_btn" onclick="G_Generate()">Generate</button>
+                    </th>
+
+                    <td>
+
+                        <textarea id="G_script" rows="5"></textarea>
+
+                    </td>
+                </tr>
+
+
+            </table>
+
+
+        </div>
+
+
+    </main>
+
+    <footer>
+        
+        <button class="above" onclick="window.location = '#main'">^</button>
+
+        <div class="copyright" style="text-align: center;">
+            <a href="https://kztcp.github.io/me/me.html">© kzcode_ 2023</a>
+        </div>
+
+
+    </footer>
+
+    <script src="display.js"></script>
+    <script src="ospf.js"></script>
+    <script src="vlsmVX.js"></script>
+    <script src="ui.js"></script>
+    <script src="vlsm.js"></script>
+    <script src="add ons.js"></script>
+
+
+
+
+
+</body>
+
+</html>

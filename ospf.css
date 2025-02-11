@@ -1,0 +1,291 @@
+
+body{
+
+    background-color: rgb(39 39 39);
+    color: white;
+    margin: 0px;
+
+
+}
+
+:root{
+
+    --bg: rgb(0, 0, 0);
+    --fg: white;
+    --marginBottom: 5px
+}
+
+
+main, #hostsArea{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+.hostsSpace{
+
+    display: flex;
+
+    justify-content: space-evenly;
+    
+    text-align: center;
+
+    width: 200px;
+
+}
+
+
+textarea{
+
+    resize: none;
+
+}
+
+.hostsProcess{
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.choices{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#vlsm, #ospf, #masks, 
+#config, #vlsmCMDS, .choicesTable{
+
+    max-height: 250px;
+    min-width: 200px;
+    width: 250px;
+    max-width: 250px;
+
+    overflow-y: auto;
+    text-align: center;
+    margin: 10px 0px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: var(--bg);
+    color: var(--fg);
+
+}
+
+
+
+.codes{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+table{
+
+    background-color: black;
+
+    border: 2px;
+    border-color: cyan;
+
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+
+    width: 10px;
+    
+}
+
+/* Track */
+::-webkit-scrollbar-track{
+    
+    box-shadow: inset 0 0 5px cyan;
+    border-radius: 10px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb{
+
+    background: var(--fg);
+    border-radius: 15px;
+
+}
+
+#text, #input, .above{
+
+    background-color: var(--bg);
+    color: var(--fg);
+    cursor: pointer;
+    width: 75px;
+    border: 0px;
+}
+
+#text:hover, #input:hover, .above:hover, button:hover{
+
+    background-color: cyan;
+
+    color: rgb(19, 19, 19);
+}
+
+
+
+.mainTable tr{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+.serialConfiguration table, .serialConfiguration {
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#g_formula{
+
+    /* width: 100%; */
+    resize: none;
+}
+
+
+textarea, select, input{
+
+    /* background-color: black; */
+
+    border-style: none;
+
+    
+    /* color: var(--fg); */
+}
+
+
+button, input, #selectHosts{
+
+    margin: 0px 0px var(--marginBottom);
+    background-color: black;
+    color: white;
+    border-style: none;
+
+}
+
+
+
+p, #network, #mask, #hosts{
+    /* margin-block-start: 0px;
+    margin-block-end: 0px; */
+    margin: 0px 0px var(--marginBottom);
+  
+    max-height: 250px;
+    min-width: 200px;
+    width: 250px;
+    max-width: 250px;
+
+
+}
+
+p{
+    text-align: center;
+}
+
+
+textarea{
+
+    background-color: black;
+    color: white;
+    border-style: none;
+
+}
+
+select{
+
+
+    background-color: #003e8e;
+    color: white;
+    border-style: none;
+
+}
+
+
+.g_btn{
+
+    background-color: #003e8e;
+    color: white;
+
+}
+
+.g_btn:hover{
+    background-color: cyan;
+    color: black;
+
+}
+
+.bar{
+
+    position: sticky;
+    top: 0;
+
+
+    background-color:     #353535;
+    /* color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+
+}
+
+a{
+
+    color: var(--fg);
+}
+
+a:hover{
+
+    color: cyan;
+}
+
+
+
+.myConfig{
+
+    width:250px
+}
+
+footer{
+
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1dvw;
+
+}
+
+footer a{
+
+    text-decoration: none;
+
+}
